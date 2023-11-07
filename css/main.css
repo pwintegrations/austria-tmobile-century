@@ -395,7 +395,7 @@ footer {
 }
 
 .austria-tmobile-banner.background{
-    background-image: url("../images/banner-landing-austria-tmobile.webp");
+    background-image: url("../img/banner-landing-austria-tmobile.webp");
 }
 .service-line{
     color: #9C9C9C;
@@ -435,13 +435,14 @@ footer {
     text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
 }
 
-.austria-tmobile-button-wrapper button span{
+.austria-tmobile-button-wrapper button span {
     text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
     font-size: 25px;
     font-family: 'Bahnschrift', sans-serif;
     text-transform: uppercase;
     text-align: center;
     color: #fff;
+}
 
 .austria-tmobile-link{
     color: #509E31;
@@ -468,7 +469,7 @@ footer {
     color: #509E31;
     text-decoration: none;
 }
-}
+
 
 .austria-tmobile-terms{
     font-family: 'Roboto', sans-serif;
