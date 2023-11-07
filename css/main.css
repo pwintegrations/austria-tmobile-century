@@ -394,4 +394,118 @@ footer {
     text-align: center;
 }
 
+.austria-tmobile-banner.background{
+    background-image: url("../../images/banner-landing-austria-tmobile.webp");
+}
+.service-line{
+    color: #9C9C9C;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.service-line div{
+    width: 50%;
+    font-weight: 400;
+}
+
+.austria-tmobile-button-wrapper button{
+    font-size: 25px;
+    line-height: 66px!important;
+    font-family: 'Bahnschrift', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    width: calc(100% - 28px - 28px);
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(94,181,50);
+    background: -moz-linear-gradient(194deg, rgba(94,181,50,1) 0%, rgba(50,112,49,1) 100%);
+    background: -webkit-linear-gradient(194deg, rgba(94,181,50,1) 0%, rgba(50,112,49,1) 100%);
+    background: linear-gradient(194deg, rgba(94,181,50,1) 0%, rgba(50,112,49,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5eb532",endColorstr="#327031",GradientType=1);
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.austria-tmobile-button-wrapper button span{
+    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+    font-size: 25px;
+    font-family: 'Bahnschrift', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+
+.austria-tmobile-link{
+    color: #509E31;
+    text-decoration: underline;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.austria-tmobile-link:hover, .austria-tmobile-link:active, .austria-tmobile-link:focus{
+    color: #509E31;
+    text-decoration: none;
+}
+
+.austria-footer .footer-menu-row a.austria-tmobile-link, .austria-footer .footer-menu-row a.austria-tmobile-link:not([href]){
+    color: #509E31;
+    text-decoration: underline;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.austria-footer .footer-menu-row a.austria-tmobile-link:hover, .austria-footer .footer-menu-row a.austria-tmobile-link:active, .austria-footer .footer-menu-row a.austria-tmobile-link:focus {
+    color: #509E31;
+    text-decoration: none;
+}
+}
+
+.austria-tmobile-terms{
+    font-family: 'Roboto', sans-serif;
+    color: #9C9C9C;
+    font-weight: 400;
+    font-size: 12px;
+    padding: 10px 32px 0;
+}
+
+.austria-tmobile-terms p{
+    margin-bottom: 14px
+}
+
+.austria-tmobile-backwards-link {
+    color: #CFCFCF;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.checkbox-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+input[type=checkbox]{
+    width: 14px;
+    height: 14px;
+    margin: 0 6px 2px 0;
+}
+
+.century-logo.austria-tmobile-logo img{
+    max-width: 146px
+}
+
 /*# sourceMappingURL=landings.css.map */

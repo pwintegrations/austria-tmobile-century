@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Landing Austria Drei</title>
+    <title>Landing Austria TMOBILE</title>
     <link rel="apple-touch-icon" href="favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,64 +36,146 @@
              grid-template-rows: repeat(17, 6.25vh);
              background-color: #101010;
              color: #ffffff">
-        <div class="element-wrapper" style="grid-area:1 / 1 / 9 / 10;z-index:0">
-            <div class="background bottom austria-banner" ></div>
+        <div class="element-wrapper" style="grid-area:1 / 1 / 11 / 12;z-index:0">
+            <div class="background bottom austria-tmobile-banner" ></div>
         </div>
-        <div class="element-wrapper" style="grid-area:1 / 6 / 3 / 10;z-index:1">
-            <div class="century-logo"><img src="img/logo-century-white.webp" alt="Century Logo"></div>
+        <div class="element-wrapper" style="grid-area:6 / 1 / 7 / 10;z-index:1">
+            <div class="century-logo austria-tmobile-logo"><img src="{{ asset('build/images/logo-century-white.webp') }}" alt="Century Logo"></div>
         </div>
-        <div class="element-wrapper" style="grid-area:9 / 1 / 10 / 10;z-index:1">
-            <div class="over-btn-text">
-                Sie erhalten 30.000 Edelsteine pro Monat zur Nutzung im Spiel. Abonnement für 5,99 € inkl. MwSt pro Woche.
+        <div class="element-wrapper" style="grid-area:8 / 3 / 9 / 9;z-index:1">
+            <div class="service-text">
+                <div class="service-line">
+                    <div>Anbieter:</div>
+                    <div>Next Move Digital LTD</div>
+                </div>
+                <div class="service-line">
+                    <div>Produkt:</div>
+                    <div>Century</div>
+                </div>
+                <div class="service-line">
+                    <div>Preis inkl. Steuer:</div>
+                    <div>EUR 5.99</div>
+                </div>
+                <div class="service-line">
+                    <div>Abointervall:</div>
+                    <div>Pro Woche</div>
+                </div>
             </div>
         </div>
-        <div class="element-wrapper" style="grid-area:10 / 1 / 12 / 10 ;z-index:1">
-            <div class="austria-button-wrapper">
-                <form action="https://pwintegrations.github.io/austria-payment" method="get">
+        <div class="element-wrapper" style="grid-area:11 / 1 / 13 / 10 ;z-index:1">
+            <div class="austria-tmobile-button-wrapper">
+                <form action="century-mobile.com/austria_payment" method="get">
                     <button
                             type="submit"
                             id="main-subscribe-button"
                             class="main-subscribe-button"
                     >
-                        <span>weiter</span><i class="download-icon"></i>
+                        {{ translate('continue.btn') }}
                     </button>
                     <a
-                            href="https://pwintegrations.github.io/austria-payment"
+                            href="century-mobile.com/austria_payment"
                             class="DCBProtection"
                             style="display: none"
                     ></a>
                 </form>
             </div>
         </div>
-        <div class="element-wrapper" style="grid-area:12 / 1 / 15 / 10;z-index:1">
-            <div class="austria-terms">
-                Durch Klicken auf &#60;WEITER&gt; akzeptiere ich ausdrücklich die <a href="/austria-landing/privacy.html" class="text-link" target="_blank">Datenschutzrichtlinie</a> von Century's und ich nehme zur Kenntnis, dass der Diensteanbieter Century meine Rufnummer für Zwecke der Verrechnung des von mir bestellten Dienstes über meine Mobilfunkrechnung von meinem Mobilfunkanbieter DREI einholt.
-            </div>
-        </div>
-        <div class="element-wrapper" style="grid-area:15 / 1 / 16 / 10;z-index:1">
-            <button class="backwards-link" onclick="location.href='https://www.google.com/'">
-                Abbrechen
+        <div class="element-wrapper" style="grid-area:12 / 1 / 13 / 10;z-index:1">
+            <button class="austria-tmobile-backwards-link backwards-link" onclick="location.href='https://www.google.com/'">
+                {{ translate('cancel.btn') }}
             </button>
         </div>
-        <div class="element-wrapper" style="grid-area:16 / 1 / 19 / 10;z-index:1">
+        <div class="element-wrapper" style="grid-area:13 / 1 / 18 / 10;z-index:1">
+            <div class="austria-tmobile-terms">
+                <div class="checkbox-box">
+                    <input type="checkbox" id="terms-validate" name="terms-validate" required />
+                    <label for="terms-validate">Mit Klick auf „Weiter“ stimme ich ausdrücklich der sofortigen Leistungserbringung und dem Verlust des <a class="austria-tmobile-link" href="/terms-and-conditions#right_of_withdrawal">Rücktrittsrechts</a> zu.</label>
+                </div>
+                {#                {{ translate('terms.landing.text1') | raw }}#}
+                <p>Sie können Ihr Abonnement jederzeit im Bereich <a class="austria-tmobile-link" href="/account/profile">Mein Konto</a> oder über diesen Link <a href="https://mobileinfo.biz/" class="austria-tmobile-link" target="_blank">https://mobileinfo.biz/</a> kündigen.</p>
+                <p>Die Kosten werden Ihrer Telefonrechnung hinzugefügt.</p>
+                <p>Indem Sie sich jetzt anmelden, akzeptieren Sie unsere Allgemeinen Geschäftsbedingungen.</p>
+                <p>Die Gebühren werden Ihrer Telefonrechnung hinzugefügt.</p>
+                <p>Alle Anzeigen und In-App-Käufe wurden entfernt. Sie können alle Ihre Edelsteine behalten, auch wenn Sie Ihr Abonnement kündigen.</p>
+            </div>
+        </div>
+
+        <div class="element-wrapper" style="grid-area:18 / 1 / 21 / 10;z-index:1">
             <div class="austria-footer">
                 <div class="footer-menu">
                     <div class="footer-menu-row">
-                        <a href="/austria-landing/imprint.html">Impressum</a>
-                        <a href="/austria-landing/terms.html">Nutzungsbedingungen</a>
+                        <a class="austria-tmobile-link" href="https://century-mobile.com/imprint">{{ translate('lp.footer.imprint') }}</a>
+                        <a class="austria-tmobile-link" href="https://century-mobile.com/terms-and-conditions">{{ translate('lp.terms.conditions') }}</a>
                     </div>
                     <div class="footer-menu-row">
-                        <a href="/austria-landing/contact_us.html">Kontakt</a>
-                        <a href="/austria-landing/privacy.html">Datenschutz</a>
-                        <a href="http://mobileinfo.biz" target="_blank">Kündigung</a>
+                        <a class="austria-tmobile-link" href="https://century-mobile.com/contact-us">{{ translate('lp.contact.page.title') }}</a>
+                        <a class="austria-tmobile-link" href="https://century-mobile.com/privacy">{{ translate('lp.footer.data.protection') }}</a>
+                        <a class="austria-tmobile-link" href="http://mobileinfo.biz" target="_blank">{{ translate('lp.footer.termination') }}</a>
                     </div>
                 </div>
                 <div class="copyright austria-copyright">
-                    ©2023 Alle Rechte vorbehalten.
+                    {{ translate('copyright.text') }}
                 </div>
             </div>
         </div>
     </div>
 </main>
+<script type="text/javascript">
+    document.onreadystatechange = function () {
+        const checkBox = document.querySelector('#terms-validate');
+        const continueBtn = document.querySelector('#main-subscribe-button');
+
+        continueBtn.addEventListener('click', function() {
+            if (checkBox.checked === false) {
+                continueBtn.classList.add('disabled');
+                continueBtn.disabled = true;
+                return false;
+            } else {
+                continueBtn.classList.remove('disabled');
+                continueBtn.removeAttribute('disabled');
+            }})
+
+        checkBox.addEventListener('click', function () {
+            if (checkBox.checked === false) {
+                continueBtn.classList.add('disabled');
+                continueBtn.disabled = true;
+                return false;
+            } else {
+                continueBtn.classList.remove('disabled');
+                continueBtn.removeAttribute('disabled');
+            }
+
+
+        })
+
+    }
+
+    // $(document).ready(function () {
+    //
+    //
+    //
+    //     $("#terms-validate").change(function () {
+    //         $("#subLink").toggleClass("disabled", !this.checked);
+    //
+    //         if (this.checked) {
+    //             $("#subLinkVerify").removeClass('active');
+    //             $("#subLink").addClass('active');
+    //         } else
+    //         {
+    //             $("#subLinkVerify").addClass('active');
+    //             $("#subLink").removeClass('active');
+    //         }
+    //     });
+    //
+    //     $("#subLinkVerify").click(function (e) {
+    //         if (!$("#terms-validate").is(':checked')) {
+    //             e.preventDefault();
+    //             return false;
+    //
+    //         }
+    //     });
+    //
+    // });
+</script>
 </body>
 </html>
