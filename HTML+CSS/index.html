@@ -37,7 +37,7 @@
              background-color: #101010;
              color: #ffffff">
         <div class="element-wrapper" style="grid-area:1 / 1 / 11 / 12;z-index:0">
-            <div class="background bottom austria-tmobile-banner" ></div>
+            <div class="background bottom austria-tmobile-banner"></div>
         </div>
         <div class="element-wrapper" style="grid-area:6 / 1 / 7 / 10;z-index:1">
             <div class="century-logo austria-tmobile-logo"><img src="img/century-logo-white.webp" alt="Century Logo"></div>
@@ -64,13 +64,13 @@
         </div>
         <div class="element-wrapper" style="grid-area:11 / 1 / 13 / 10 ;z-index:1">
             <div class="austria-tmobile-button-wrapper">
-                <form action="/austria-tmobile-century" method="post">
+                <form action="https://pwintegrations.github.io/austria-tmobile-century/confirm.html" method="get">
                     <button
                             type="submit"
                             id="main-subscribe-button"
                             class="main-subscribe-button"
                     >
-                        KAUFEN
+                        WEITER
                     </button>
                     <a
                             href="century-mobile.com/austria_payment"
@@ -85,23 +85,31 @@
                 Abbrechen
             </button>
         </div>
-        <div class="element-wrapper" style="grid-area:13 / 1 / 19 / 10;z-index:1">
+        <div class="element-wrapper" style="grid-area:13 / 1 / 18 / 10;z-index:1">
             <div class="austria-tmobile-terms">
-                <p>
-                    Mit Klick auf „Kaufen” akzeptieren Sie die <a href="" class="austria-tmobile-link" target="_blank">Nutzungsbedingungen Mobile Payment</a> der T-Mobile Austria GmbH und bezahlen über Ihre Rufnummer MSISDN den angeführten Betrag gemäß angeführtem Zahlungsintervall.
-                    In weiterer Folge akzeptieren Sie die AGB des Anbieters, die sofortige Vertragserfüllung sowie den damit verbundenen Verlust d. Rücktrittsrechtes, T-Mobile Austria GmbH übermittelt in Ihrem Auftrag zum Zwecke der Zahlung und der Servicierung Ihre Rufnummer an den Anbieter. Abrechnung erfolgt über Mobilfunkrechnung / Prepaidguthaben.
-                    Datengebühren laut Tarif Aboverwaltung am Serviceportal von T-Mobile.
-                </p>
+                <div class="checkbox-box">
+                    <input type="checkbox" id="terms-validate" name="terms-validate" required />
+                    <label for="terms-validate">Mit Klick auf „Weiter“ stimme ich ausdrücklich der sofortigen Leistungserbringung und dem Verlust des <a class="austria-tmobile-link" href="/austria-tmobile-century/terms.html#right_of_withdrawal">Rücktrittsrechts</a> zu.
+                        </label>
+                </div>
+                <p>Sie können Ihr Abonnement jederzeit im Bereich <a class="austria-tmobile-link" href="https://century-mobile.com/account/profile">Mein Konto</a> oder über diesen Link <a href="https://mobileinfo.biz/" class="austria-tmobile-link" target="_blank">https://mobileinfo.biz/</a> kündigen.</p>
+                <p>Die Kosten werden Ihrer Telefonrechnung hinzugefügt. Indem Sie sich jetzt anmelden, akzeptieren Sie unsere Allgemeinen Geschäftsbedingungen.</p>
+                <p>Die Gebühren werden Ihrer Telefonrechnung hinzugefügt.</p>
+                <p>Alle Anzeigen und In-App-Käufe wurden entfernt. Sie können alle Ihre Edelsteine behalten, auch wenn Sie Ihr Abonnement kündigen.</p>
             </div>
         </div>
 
-        <div class="element-wrapper" style="grid-area:19 / 1 / 22 / 10;z-index:1">
+        <div class="element-wrapper" style="grid-area:18 / 1 / 21 / 10;z-index:1">
             <div class="austria-footer">
                 <div class="footer-menu">
                     <div class="footer-menu-row">
-                        <a class="austria-tmobile-link" href="/austria-tmobile-century/terms.html">AGB & Mehr</a>
+                        <a class="austria-tmobile-link" href="/austria-tmobile-century/imprint.html">Impressum</a>
+                        <a class="austria-tmobile-link" href="/austria-tmobile-century/privacy.html">Datenschutz</a>
+                    </div>
+                    <div class="footer-menu-row">
                         <a class="austria-tmobile-link" href="/austria-tmobile-century/contact_us.html">Kontakt</a>
-                        <a class="austria-tmobile-link" href="#">Serviceportal</a>
+                        <a class="austria-tmobile-link" href="/austria-tmobile-century/terms.html">Nutzungsbedingungen</a>
+                        <a class="austria-tmobile-link" href="http://mobileinfo.biz" target="_blank">Kündigung</a>
                     </div>
                 </div>
                 <div class="copyright austria-copyright">
@@ -111,5 +119,62 @@
         </div>
     </div>
 </main>
+<script type="text/javascript">
+    document.onreadystatechange = function () {
+        const checkBox = document.querySelector('#terms-validate');
+        const continueBtn = document.querySelector('#main-subscribe-button');
+
+        continueBtn.addEventListener('click', function() {
+            if (checkBox.checked === false) {
+                continueBtn.classList.add('disabled');
+                continueBtn.disabled = true;
+                return false;
+            } else {
+                continueBtn.classList.remove('disabled');
+                continueBtn.removeAttribute('disabled');
+            }})
+
+        checkBox.addEventListener('click', function () {
+            if (checkBox.checked === false) {
+                continueBtn.classList.add('disabled');
+                continueBtn.disabled = true;
+                return false;
+            } else {
+                continueBtn.classList.remove('disabled');
+                continueBtn.removeAttribute('disabled');
+            }
+
+
+        })
+
+    }
+
+    // $(document).ready(function () {
+    //
+    //
+    //
+    //     $("#terms-validate").change(function () {
+    //         $("#subLink").toggleClass("disabled", !this.checked);
+    //
+    //         if (this.checked) {
+    //             $("#subLinkVerify").removeClass('active');
+    //             $("#subLink").addClass('active');
+    //         } else
+    //         {
+    //             $("#subLinkVerify").addClass('active');
+    //             $("#subLink").removeClass('active');
+    //         }
+    //     });
+    //
+    //     $("#subLinkVerify").click(function (e) {
+    //         if (!$("#terms-validate").is(':checked')) {
+    //             e.preventDefault();
+    //             return false;
+    //
+    //         }
+    //     });
+    //
+    // });
+</script>
 </body>
 </html>
