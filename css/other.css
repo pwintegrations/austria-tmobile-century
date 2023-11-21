@@ -327,7 +327,7 @@ footer.inner-footer {
 
 @media screen and (min-width: 360px) {
     .footer-menu ul li + li {
-        margin-left: 6px;
+        margin-left: 12px;
     }
     .footer-menu ul li a {
         font-size: 13px;
