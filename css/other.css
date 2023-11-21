@@ -283,13 +283,14 @@ footer.inner-footer {
     flex-direction: row;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 .footer-menu ul li {
-    line-height: 22px;
+    line-height: 32px;
 }
 .footer-menu ul li + li {
     margin-left: 10px;
